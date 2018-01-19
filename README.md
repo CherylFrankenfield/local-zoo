@@ -12,10 +12,11 @@ _Create an app for zoo employees to do animal intakes, creating records of new a
 -------
 * Git clone ( )
 * Run:
-_npm install_
-_bower install_
-_gulp bower_
-_gulp serve_
+
+* npm install
+* bower install
+* gulp bower
+* gulp serve
 
 ## Planning
 

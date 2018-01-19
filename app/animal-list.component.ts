@@ -5,17 +5,18 @@ import { Animal } from './animal.model';
   selector: 'animal-list',
   template: `
     <h4>Animal List</h4>
+
     <ul>
       <li (click)="isDone(currentAnimal)" *ngFor="let currentAnimal of childAnimalList">{{currentAnimal.species}}
       <ul>
-        <li>{{currentAnimal.name}}</li>
-        <li>{{currentAnimal.age}}</li>
-        <li>{{currentAnimal.diet}}</li>
-        <li>{{currentAnimal.location}}</li>
-        <li>{{currentAnimal.caretakers}}</li>
-        <li>{{currentAnimal.sex}}</li>
-        <li>{{currentAnimal.likes}}</li>
-        <li>{{currentAnimal.dislikes}}</li>
+        <li>Animal Name: {{currentAnimal.name}}</li>
+        <li>Age: {{currentAnimal.age}}</li>
+        <li>Diet: {{currentAnimal.diet}}</li>
+        <li>Zoo region: {{currentAnimal.location}}</li>
+        <li>Caretakers on staff: {{currentAnimal.caretakers}}</li>
+        <li>Sex: {{currentAnimal.sex}}</li>
+        <li>Likes: {{currentAnimal.likes}}</li>
+        <li>Dislikes: {{currentAnimal.dislikes}}</li>
       </ul>
       <button class="edit-btn" (click)="editButtonClicked(currentAnimal)">Edit Details</button>
       </li>
@@ -26,5 +27,10 @@ import { Animal } from './animal.model';
 
 export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
+
+
+  isDone(clickedAnimal) {
+    console.log("animal list");
+  }
 
 }

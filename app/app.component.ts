@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Animal } from './animal.model';
-import { AnimalListComponent } from './animal-list.component';
 
 
 @Component({
@@ -10,7 +9,7 @@ import { AnimalListComponent } from './animal-list.component';
     <h1>{{zooName}}</h1>
     <animal-list [childAnimalList]="masterAnimals"></animal-list>
     <animal-edit [childSelectedAnimal]="selectedAnimal"></animal-edit>
-    <animal-new > </animal-new>
+    <animal-new (newAnimalSender)="addAnimal($event)"></animal-new>
   </div>
   `
 })
@@ -27,6 +26,10 @@ export class AppComponent {
 
   editAnimal() {
     alert("You just requested to edit an animal!");
+  }
+
+  addAnimal(newAnimalFromChild: Animal) {
+    this.masterAnimals.push(newAnimalFromChild);
   }
 
 }

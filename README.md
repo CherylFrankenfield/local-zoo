@@ -23,13 +23,13 @@ _gulp serve_
   * This app uses Angular and Typescript.
 
 ### 2. Specs
-_The app will allow a zoo employee to enter animal data in form._
-* _Input: Text input of animal intake: "Name: , Species: , Age: "._
-* _Output: Returns a doctor's first name: "Leo, Panthera leo, 5"._
-
 _The app will allow a zoo employee to view a display of animals currently at the zoo._
 * _Input: Click button to view list._
 * _Output: Returns list of animals currently at the zoo._
+
+_The app will allow a zoo employee to enter animal data in form._
+* _Input: Text input of animal intake: "Name: , Species: , Age: "._
+* _Output: Returns a doctor's first name: "Leo, Panthera leo, 5"._
 
 _The app will allow a zoo employee to edit animal data after the initial intake._
 * _Input: Click on edit button._

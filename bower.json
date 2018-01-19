@@ -1,9 +1,9 @@
 {
-  "name": "Local Zoo Animal Tracker App",
-  "description": "Tracks animal data",
+  "name": "zoo-app",
+  "description": "",
   "main": "",
   "authors": [
-    "Cheryl Frankenfield"
+    "Cheryl Frankenfield <cherylfrankenfield@gmail.com>"
   ],
   "license": "MIT",
   "homepage": "",
@@ -13,5 +13,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^4.0.0"
+  }
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Animal } from './animal.model';
+import { AnimalEditComponent } from './animal-edit.component';
 
 
 @Component({
@@ -7,8 +8,8 @@ import { Animal } from './animal.model';
   template: `
   <div class="container">
     <h1>{{zooName}}</h1>
-    <animal-list [childAnimalList]="masterAnimals"></animal-list>
-    <animal-edit [childSelectedAnimal]="selectedAnimal"></animal-edit>
+    <animal-list [childAnimalList]="masterAnimals" (clickSender)="editAnimal($event)"></animal-list>
+    <animal-edit [childSelectedAnimal]="selectedAnimal" (doneButtonClicked)="finishedEditing()"></animal-edit>
     <animal-new (newAnimalSender)="addAnimal($event)"></animal-new>
   </div>
   `
@@ -23,9 +24,15 @@ export class AppComponent {
     new Animal('Felidae','Sneakers',1,'Carnivore','Predators of Africa',3,'Female','Being alone','Mice'),
     new Animal('Sus scrofa','Jerry',1,'Omnivore','Asia Islands',2,'Male','Dirt baths','Bacon')
   ];
+  selectedAnimal = null;
 
-  editAnimal() {
-    alert("You just requested to edit an animal!");
+  editAnimal(clickedAnimal) {
+    // alert("You just requested to edit an animal!");
+    this.selectedAnimal = clickedAnimal;
+  }
+
+  finishedEditing() {
+    this.selectedAnimal = null;
   }
 
   addAnimal(newAnimalFromChild: Animal) {

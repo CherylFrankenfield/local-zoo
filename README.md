@@ -10,7 +10,7 @@ _Create an app for zoo employees to do animal intakes, creating records of new a
 
 ## Setup/Installation Requirements
 -------
-* Git clone ( )
+* Git clone (https://github.com/CherylFrankenfield/local-zoo.git)
 * Run:
 
 * npm install
@@ -21,7 +21,7 @@ _Create an app for zoo employees to do animal intakes, creating records of new a
 ## Planning
 
 ### 1. Configuration/dependencies
-  * This app uses Angular and Typescript.
+  * This app uses Angular, Typescript, Bootstrap.
 
 ### 2. Specs
 _The app will allow a zoo employee to view a display of animals currently at the zoo._

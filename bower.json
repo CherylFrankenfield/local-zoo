@@ -1,0 +1,17 @@
+{
+  "name": "Local Zoo Animal Tracker App",
+  "description": "Tracks animal data",
+  "main": "",
+  "authors": [
+    "Cheryl Frankenfield"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

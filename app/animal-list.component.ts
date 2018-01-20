@@ -4,26 +4,28 @@ import { Animal } from './animal.model';
 @Component ({
   selector: 'animal-list',
   template: `
-    <h4>Animal List</h4>
     <h5>Sort by Ages</h5>
     <select (change)="onChange($event.target.value)">
       <option value="allAnimals">All Animals</option>
       <option value="young">Baby Animals</option>
       <option value="mature" selected="selected">Mature Animals</option>
     </select>
+    <h3>Animal List</h3>
     <ul>
-      <li (click)="isDone(currentAnimal)" *ngFor="let currentAnimal of childAnimalList | age:filterByAge">{{currentAnimal.species}}
-      <ul>
-        <li>Animal Name: {{currentAnimal.name}}</li>
-        <li>Age: {{currentAnimal.age}}</li>
-        <li>Diet: {{currentAnimal.diet}}</li>
-        <li>Zoo region: {{currentAnimal.location}}</li>
-        <li>Caretakers on staff: {{currentAnimal.caretakers}}</li>
-        <li>Sex: {{currentAnimal.sex}}</li>
-        <li>Likes: {{currentAnimal.likes}}</li>
-        <li>Dislikes: {{currentAnimal.dislikes}}</li>
-      </ul>
-      <button class="edit-btn" (click)="editButtonClicked(currentAnimal)">Edit Details</button>
+      <li *ngFor="let currentAnimal of childAnimalList | age:filterByAge">{{currentAnimal.species}}
+      <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Animal Name: {{currentAnimal.name}}</li>
+          <li class="list-group-item">Age: {{currentAnimal.age}}</li>
+          <li class="list-group-item">Diet: {{currentAnimal.diet}}</li>
+          <li class="list-group-item">Zoo region: {{currentAnimal.location}}</li>
+          <li class="list-group-item">Caretakers on staff: {{currentAnimal.caretakers}}</li>
+          <li class="list-group-item">Sex: {{currentAnimal.sex}}</li>
+          <li class="list-group-item">Likes: {{currentAnimal.likes}}</li>
+          <li class="list-group-item">Dislikes: {{currentAnimal.dislikes}}</li>
+        </ul>
+      </div>
+      <button class="btn btn-outline-secondary" (click)="editButtonClicked(currentAnimal)">Edit Details</button>
       </li>
     </ul>
   `
@@ -35,9 +37,9 @@ export class AnimalListComponent {
   @Output() clickSender = new EventEmitter();
   filterByAge: string = "mature";
 
-  isDone(clickedAnimal) {
-    console.log("animal list");
-  }
+  // isDone(clickedAnimal) {
+  //   console.log("animal list");
+  // }
 
   onChange(optionFromMenu) {
     this.filterByAge = optionFromMenu;

@@ -1,13 +1,20 @@
+body {
+  background: url('./../images/zoo.jpg') norepeat;
+  background-color: #D8F793;
+  font-size: 1em;
+  font-family: sans-serif;
+}
+
 .container {
   /* display: flex;
   justify-content: space-between;
   align-items: center; */
 }
 
-
-.edit-btn {
-  color: green;
+h1 {
+  
 }
+
 
 ul {
   list-style: none;

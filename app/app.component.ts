@@ -9,7 +9,7 @@ import { AnimalEditComponent } from './animal-edit.component';
   <div class="container">
     <h1>{{zooName}}</h1>
     <animal-list [childAnimalList]="masterAnimals" (clickSender)="editAnimal($event)"></animal-list>
-    <animal-edit [childSelectedAnimal]="selectedAnimal" (doneButtonClicked)="finishedEditing()"></animal-edit>
+    <animal-edit [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></animal-edit>
     <animal-new (newAnimalSender)="addAnimal($event)"></animal-new>
   </div>
   `

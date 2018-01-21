@@ -1,12 +1,12 @@
 /* For testing only */
 
-:not(body):not(html) {
+/* :not(body):not(html) {
   box-sizing:border-box;
   border:1px dashed #000;
 }
 .columns {
   min-height: 100px;
-}
+} */
 
 /* End for testing */
 
@@ -17,6 +17,9 @@ html {
   box-sizing: inherit;
 }
 
+.container {
+  margin: 0 auto;
+}
 body {
   background-color: #D8F793;
   font-size: 1em;
@@ -79,10 +82,14 @@ body {
 
 #animal-edit-form input {
   height: 2em;
+  width: 75%;
   border-width: thin;
   border-color: 10px white;
 }
 
 ul {
+  list-style: none;
+}
+li {
   list-style: none;
 }

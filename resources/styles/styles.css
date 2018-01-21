@@ -11,8 +11,30 @@ body {
   align-items: center; */
 }
 
+form {
+  background-color: #D3DBE3;
+  border: 2px solid white;
+  color: black;
+  width: 400px;
+  height: 725px;
+  font-size: 1em;
+  padding: 1em;
+  font-family: sans-serif;
+}
+
+form input {
+  height: 2em;
+  width: 350px;
+  border-width: thin;
+  border-color: 10px white;
+}
+
+form label {
+  padding-top: 5px;
+}
+
 h1 {
-  
+
 }
 
 

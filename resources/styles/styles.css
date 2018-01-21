@@ -1,42 +1,87 @@
+/* For testing only */
+
+:not(body):not(html) {
+  box-sizing:border-box;
+  border:1px dashed #000;
+}
+.columns {
+  min-height: 100px;
+}
+
+/* End for testing */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
-  background: url('./../images/zoo.jpg') norepeat;
   background-color: #D8F793;
   font-size: 1em;
   font-family: sans-serif;
 }
 
-.container {
-  /* display: flex;
+.header {
+  align-items: center;
+  display: flex;
   justify-content: space-between;
-  align-items: center; */
+  margin: 0 auto;
+  background-color: #5C6784;
+  color: white;
+  padding: 1em;
+  width: 100%;
 }
 
-form {
+.header ul {
+  display: flex;
+}
+
+.header li {
+  margin: 0 20px;
+}
+
+.hero-animal-list {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+#animal-new-form {
   background-color: #D3DBE3;
   border: 2px solid white;
   color: black;
-  width: 400px;
-  height: 725px;
+  width: 100%;
+  height: auto;
   font-size: 1em;
   padding: 1em;
   font-family: sans-serif;
 }
 
-form input {
+#animal-new-form input {
   height: 2em;
-  width: 350px;
+  width: 75%;
   border-width: thin;
   border-color: 10px white;
 }
 
-form label {
-  padding-top: 5px;
+#animal-edit-form {
+  background-color: #D3DBE3;
+  border: 2px solid white;
+  color: black;
+  width: 100%;
+  height: auto;
+  font-size: 1em;
+  padding: 1em;
+  font-family: sans-serif;
 }
 
-h1 {
-
+#animal-edit-form input {
+  height: 2em;
+  border-width: thin;
+  border-color: 10px white;
 }
-
 
 ul {
   list-style: none;

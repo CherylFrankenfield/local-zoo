@@ -6,7 +6,7 @@ import { Animal } from './animal.model';
   template: `
     <h2>Animal Intake</h2>
     <p>Add new animal to database.<p>
-    <form>
+    <form id="animal-new-form">
       <div class="form-group">
         <label name="species">Species Name</label>
         <input #newSpecies name="species"><br>
@@ -14,7 +14,7 @@ import { Animal } from './animal.model';
         <input #newName name="name"><br>
         <label name="age">Animal Age</label>
         <input #newAge name="age"><br>
-        <label name="diet">Diet</label>
+        <label name="diet">Animal Diet</label>
         <input #newDiet name="diet"><br>
         <label name="location">Zoo Location</label>
         <input #newLocation name="location"><br>

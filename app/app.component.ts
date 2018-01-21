@@ -7,10 +7,24 @@ import { AnimalEditComponent } from './animal-edit.component';
   selector: 'app-root',
   template: `
   <div class="container">
-    <h1>{{zooName}}</h1>
-    <animal-list [childAnimalList]="masterAnimals" (clickSender)="editAnimal($event)"></animal-list>
-    <animal-edit [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></animal-edit>
-    <animal-new (newAnimalSender)="addAnimal($event)"></animal-new>
+    <div class="header">
+      <h1>{{zooName}}</h1>
+      <ul>
+        <li>HOME</li>
+        <li>ANIMAL LIST</li>
+        <li>ANIMAL INTAKE</li>
+        <li>PURCHASING ADMIN</li>
+      </ul>
+    </div>
+    <div class="hero-animal-list">
+      <animal-list [childAnimalList]="masterAnimals" (clickSender)="editAnimal($event)"></animal-list>
+    </div>
+    <div class="hero-animal-edit">
+      <animal-edit [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></animal-edit>
+    </div>
+    <div class="footer">
+      <animal-new (newAnimalSender)="addAnimal($event)"></animal-new>
+    </div>
   </div>
   `
 })

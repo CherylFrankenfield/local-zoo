@@ -53,7 +53,7 @@ _The app will allow a zoo employee to filter animals by age and view data. Optio
 
 ## Known Bugs
 
-_Text_
+_Added DietPipe but unsure how to connect two filter pipes on same dataset. Also having some trouble with list group and flexbox to work together. I will also need to add more show/hide functionality._
 
 ## Support and contact details
 
